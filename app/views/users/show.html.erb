@@ -1,9 +1,15 @@
-
-
-<p>Hello <%= @user.first_name %></p>
-
-<p>Voici l'email associé à ton compte = <%= @user.email %></p>
-
-<p>
-<a href="/" class="btn btn-primary">Back</a>
-</p>
+<html lang="en">
+    <header class="text-center">
+        <h2><FONT color="#263238">Salut <%= @user.first_name %>, bienvenue parmi nous !</h2>
+    </header>
+    <p></p>
+    <body>
+        <h5> Voici les infos te concernant &#10549;&#65039;</h5>
+        <p></p>
+        <p>	&#10024; Ton nom et prénom : <%= @user.first_name %><%= @user.last_name %></p>
+        <p>	&#10024; L'email associé à ton compte : <%= @user.email %></p>
+        <p>	&#10024; Les événements auxquels tu participes : <%= @user.email %></p>
+        <p>	&#10024; Les événements que tu as créé : <%= @user.email %></p>
+        <p><a href="/" class="btn btn-primary">Retour</a></p>
+    </body>
+</html>

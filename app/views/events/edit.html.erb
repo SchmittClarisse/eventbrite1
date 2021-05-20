@@ -1,22 +1,27 @@
-<h1>Edit event</h1>
+<html lang="en">
+    <header class="text-center">
+        <h1>Modifier un événement</h1>
+    </header>
 
-<%= form_with model: @event do |f| %>
-    <div class="form-group">
-        <label>Event title</label>
-        <%= f.text_field :title, class: "form-control" %>
-    </div>
+    <body>
+        <%= form_with model: @event do |f| %>
+            <div class="form-group">
+                <label>Titre de l'événement :</label>
+                <%= f.text_field :title, class: "form-control" %>
+            </div>
 
-    <div class="form-group">
-        <label>Event description</label>
-        <%= f.text_area :description, class: "form-control" %>
-    </div>
+            <div class="form-group">
+                <label>Description de l'événement :</label>
+                <%= f.text_area :description, class: "form-control" %>
+            </div>
 
-    <p><%= @event.admin.first_name %></p>
+            <p><%= @event.admin.first_name %></p>
 
-    <div class="form-group">
-    <button type="submit" class="btn btn-primary">Edit event</button>
-    </div>
-
-<% end %>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Modifier</button>
+            </div>
+        <% end %>
+    </body>
+</html>
 
 

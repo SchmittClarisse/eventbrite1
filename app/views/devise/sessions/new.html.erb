@@ -1,5 +1,10 @@
-<h2>Log in</h2>
+<html lang="en">
+    <header class="text-center">
+      <h2>Salut toi, connecte-toi vite, on t'attendait !</h2>
+    </header>
+</br>
 
+    <body class="text-center">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
@@ -17,10 +22,13 @@
       <%= f.label :remember_me %>
     </div>
   <% end %>
-
+</br>
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Connecte-toi" %>
   </div>
 <% end %>
-
+</br>
+</br>
 <%= render "devise/shared/links" %>
+</body>
+</html>

@@ -9,4 +9,8 @@ class StaticPagesController < ApplicationController
   def secret
     
   end
+
+  def contact
+    
+  end
 end

@@ -4,27 +4,28 @@
     </a>
 
     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-      <li><a href="<%= root_path %>" class="nav-link px-2 link-secondary">Home</a></li>
-      <li><a href="<%= new_event_path %>" class="nav-link px-2 link-dark">Event</a></li>
-      <li><a href="<%= user_path(1) %>" class="nav-link px-2 link-dark">Profil</a></li>
-      <li><a href="#" class="nav-link px-2 link-dark">L'équipe</a></li>
-      <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
+      <li><a href="<%= root_path %>" class="nav-link px-2 link-secondary-strong">	&#127968; Accueil</a></li>
+      <li><a href="<%= new_event_path %>" class="nav-link px-2 link-dark">???</a></li>
+      <li><a href="<%= new_event_path %>" class="nav-link px-2 link-dark">&#127942; Créer un évément</a></li>
+      <li><a href="<%= user_path(1) %>" class="nav-link px-2 link-dark">&#128124; Ton profil</a></li>
+      <li><a href="<%= static_pages_contact_path %>" class="nav-link px-2 link-dark">&#127384; Contact</a></li>
     </ul>
 
     <div class="dropdown">
     <% if user_signed_in?  %>
-      <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">Mon profil</button>
+      <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">Welcome bitch</button>
       <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
         <li><a class="dropdown-item" href="<%=user_path(current_user.id)%>">Mon profil</a></li>
         <li><hr class="dropdown-divider"></li>
         <li><a class="dropdown-item" href="<%=destroy_user_session_path%>" data-method='delete'>Se déconnecter</a></li>
-    </ul>
+      </ul>
     <% else %>
-      <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">S'inscrire/Se connecter</button>
+      <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">Come here baby</button>
       <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
         <li><a class="dropdown-item" href="<%=new_user_registration_path%>">S'inscrire</a></li> 
         <li><hr class="dropdown-divider"></li>
         <li><a class="dropdown-item" href="<%=new_user_session_path%>">Se connecter</a></li> 
-        </ul>
+      </ul>
       <%end%>
+
 </header>

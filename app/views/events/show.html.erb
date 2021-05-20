@@ -1,9 +1,10 @@
-<h1>Event title = <%= @event.title %></h1>
-
-<p>Event description = <%= @event.description %></p>
-
-<p>admin = <%= @event.admin.first_name %></p>
-
-<p>
-<a href="/" class="btn btn-primary">Back</a>
-</p>
+<html lang="en">
+    <header class="text-center">
+        <h2><FONT color="#263238">Nom de l'événement : <%= @event.title %></h2>
+    </header>
+    <body>
+        <p>Ce qu'il faut savoir : <%= @event.description %></p>
+        <p>Créé par <%= @event.admin.first_name %></p>
+        <p><a href="/" class="btn btn-primary">Revenir en arrière</a></p>
+    </body>
+</html>

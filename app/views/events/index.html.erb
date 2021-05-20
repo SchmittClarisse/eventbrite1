@@ -1,11 +1,15 @@
-<h1>Events</h1>
-
-<% @events.each do |event| %>
-    <h2>Event title = <%= event.title %></h2>
-    <p>event description = <%= event.description %></p>
-    <p>admin = <%= event.admin.first_name %></p>
-    
-    <p>
-    <a href="<%= event_path(event.id) %>" class="btn btn-primary">Show</a>
-    </p>
+<html lang="en">
+    <header class="text-center">
+        <h4><FONT color="#263238"><B>Retrouve tous nos évéments, fais de nouvelles rencontres et crées des souvenirs inoubliables !</B></FONT></h4>
+    </header>
+    <p></p>
+    <body>
+    <% @events.each do |event| %>
+        <p><B><FONT color="#455A64">&#10145;&#65039 Evénement : "<%= event.title %>"</FONT></B></p>
+        <p><FONT color="#455A64">Description : <%= event.description %></FONT></p>
+        <p><FONT color="#455A64">Créé par <%= event.admin.first_name %></FONT></p>
+        <p>
+        <a href="<%= event_path(event.id) %>" class="btn btn-primary">En savoir plus</a>
+        </p>
+    </body>
 <% end %>
