@@ -1,0 +1,11 @@
+<h1>Events</h1>
+
+<% @events.each do |event| %>
+    <h2>Event title = <%= event.title %></h2>
+    <p>event description = <%= event.description %></p>
+    <p>admin = <%= event.admin.first_name %></p>
+    
+    <p>
+    <a href="<%= event_path(event.id) %>" class="btn btn-primary">Show</a>
+    </p>
+<% end %>
