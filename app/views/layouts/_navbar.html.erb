@@ -11,8 +11,20 @@
       <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
     </ul>
 
-    <div class="col-md-3 text-end">
-      <button type="button" class="btn btn-outline-primary me-2">Login</button>
-      <button type="button" class="btn btn-primary">Sign-up</button>
-    </div>
+    <div class="dropdown">
+    <% if user_signed_in?  %>
+      <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">Mon profil</button>
+      <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+        <li><a class="dropdown-item" href="<%=user_path(current_user.id)%>">Mon profil</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="<%=destroy_user_session_path%>" data-method='delete'>Se déconnecter</a></li>
+    </ul>
+    <% else %>
+      <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">S'inscrire/Se connecter</button>
+      <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+        <li><a class="dropdown-item" href="<%=new_user_registration_path%>">S'inscrire</a></li> 
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="<%=new_user_session_path%>">Se connecter</a></li> 
+        </ul>
+      <%end%>
 </header>
