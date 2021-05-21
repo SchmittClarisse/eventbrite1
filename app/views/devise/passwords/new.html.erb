@@ -1,16 +1,24 @@
-<h2>Forgot your password?</h2>
+<html lang="en">
+    <header class="text-center">
+    <h2>Tu as oublié ton mot de passe ?</h2>
+    </header>
+    
+    <body class="text-center">
+      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+      <div class="field">
+        <%= f.label :email %>
+      <br/>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+      </br>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+      <div class="actions">
+        <%= f.submit "Réinitialisation du mdp" %>
+      </div>
+    <% end %>
+      </br>
+    <%= render "devise/shared/links" %>
+  </body>
+</html>
